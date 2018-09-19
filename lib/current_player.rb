@@ -1,16 +1,20 @@
-def turn_count(board)
-  turns_played = 0
-  while turns_played < 3
-    turns_played += 1
+
+
+def turn_count(turn)
+  move_count = []
+  turn.each do |unit|
+  if unit =="X" || "O"
+    move_count.push(1)
   end
-  return turns_played
 end
+end
+
 
 def current_player(board)
   num = turn_count(board)
   if num % 2 == 0
     return "X"
-  elsif num % 2 == 1
+  else
     return "O"
   end
 end

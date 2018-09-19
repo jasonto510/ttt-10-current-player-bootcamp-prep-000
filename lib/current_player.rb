@@ -5,6 +5,7 @@ def turn_count(board)
     if letter == "X" || letter == "O"
     turns_played += 1
   end
+end 
   return turns_played
 end
 

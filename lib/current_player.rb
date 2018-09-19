@@ -1,14 +1,12 @@
 
-
-def turn_count(turn)
-  move_count = []
-  turn.each do |unit|
-  if unit =="X" || "O"
-    move_count.push(1)
+def turn_count(board)
+  turns_played = 0
+  board.each do |letter|
+    if letter == "X" || letter == "O"
+    turns_played += 1
   end
+  return turns_played
 end
-end
-
 
 def current_player(board)
   num = turn_count(board)
